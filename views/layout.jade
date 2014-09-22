@@ -1,0 +1,11 @@
+doctype html
+html(lang="es",ng-app="app")
+  head
+    title= title
+    link(rel="stylesheet",href="css/bootstrap.css")
+    block estilos
+  body(ng-controller="WatchCtrl")
+    block content
+
+    script(type="text/javascript",src="js/angular.js")
+    block javascript

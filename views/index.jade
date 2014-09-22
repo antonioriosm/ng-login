@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  .panel.panel-primary
+    .panel-heading
+      h3.panel-title Create Account
+    .panel-body
+      form(role="form")
+        .form-group
+          label(for="eml") Email address
+          input#eml.form-control(type="email",placeholder="Email address",ng-model="user.email")
+        .form-group
+          label(for="pwd") Password
+          input#pwd.form-control(type="password",placeholder="Password",ng-model="user.password")
+        button.btn.btn-default(type="submit") Submit
+  .panel.panel-danger(ng-show="showReqs")
+    .panel-heading
+      h4.panel-title Password Requirements
+    .panel-body
+      ul
+        li(ng-repeat="item in reqs") {{item}}
+block javascript
+  script(type="text/javascript",src="js/app.js")
+
+block estilos
+  link(rel="stylesheet",href="css/styles.css")
